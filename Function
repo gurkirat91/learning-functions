@@ -1,0 +1,25 @@
+
+................................................................FUNCTION FOR FINDIND OUT FOIRST N PRIMW NUMBERS....................................................................
+
+
+int primenos(int n){
+	int count,i,j;
+	if(n>1){
+	printf("2 ");
+}
+i=3;
+	// i is n number to checked starting from 3 as 2 is already displayed
+   
+for(count=2;count<=n;i++){
+	//checking the i th no is prime or not
+	for(j=2;j<=i;j++){
+		if(i%j==0){
+			break;
+		}
+	}//in case of i=4 after increment i%j==0 i.e 4%2==0 is true but j=i condition is not satisfied so it will not be a prime no hence next loop will not be executed
+if(j==i){
+	printf("%d ",i);
+	count++;
+}
+}
+}
