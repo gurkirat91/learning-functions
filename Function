@@ -56,3 +56,15 @@ int lcm(int n1, int n2){
 	printf("lcm=%d",lcm);
 	
 }
+.........................................................................FUNCTION FOR FIBONACCI SERIES..........................................................................
+int fibonacci(int n){
+	int a,b,i,nextterm;
+		a=0;
+		b=1;
+		 for(i=1;i<=n;i++){
+	 	  printf("%d ",a);
+	 	  nextterm=a+b;
+	 	  a=b;
+	 	  b=nextterm;
+	 	}
+}
