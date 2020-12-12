@@ -1,0 +1,40 @@
+.................................................................ADDING AN ELEMENT IN ARRAY......................................................................................
+
+#include<stdio.h>
+int main(){
+	int a[50],i,n,num;
+	printf("Enter the no of elements:");
+	scanf("%d",&n);
+	printf("Enter the elements:\n");
+	for(i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+
+	for(i=0;i<n;i++){              //original array print
+		printf("%d ",a[i]);
+	}
+	
+	printf("\n");
+	
+	int pos;
+	printf("enter the position:");    //telling the position where the no is to be placed
+	scanf("%d",&pos);
+	
+	
+	printf("Enter the number: ");     //telling the number to  be placed
+	scanf("%d",&num);     
+	
+	for(i=n;i>pos-1;i--){             /*shifting the array one place forward.... from back eg n=5;
+	                                     here we are starting from back i.e eg number at index 4 is placed to index 5 which is new because of new addition sapce
+										 i is satting from n that we entered at top (here it is index 5 but above the index was upto 4 n-1 )*/        
+		a[i]=a[i-1];                 
+		
+	}
+
+	a[pos-1]=num;  // placing the value   // here element to be changed has inde pos-1 because eg change pos 2 so ined is 1 that is to be changed; 
+	
+	for(i=0;i<=n;i++){              //new array print
+		printf("%d ",a[i]);
+	}
+	
+}
